@@ -36,11 +36,11 @@ def clean_and_seed_catalog():
         print("Previous catalog data successfully cleared!")
 
         # 1. Admin & Test User Setup
-        admin = db.query(AdminUser).filter(AdminUser.email == "admin@auraintimates.com").first()
+        admin = db.query(AdminUser).filter(AdminUser.email == "admin@curvyx.com").first()
         if not admin:
             admin = AdminUser(
                 name="Store Manager",
-                email="admin@auraintimates.com",
+                email="admin@curvyx.com",
                 password_hash=get_password_hash("Admin@123456"),
                 role="admin",
                 is_active=True
@@ -61,7 +61,7 @@ def clean_and_seed_catalog():
         # 2. Coupons
         coupons_data = [
             {"code": "WELCOME10", "discount_type": "PERCENTAGE", "discount_value": Decimal("10.00"), "minimum_order_value": Decimal("999.00"), "maximum_discount": Decimal("300.00")},
-            {"code": "AURA20", "discount_type": "PERCENTAGE", "discount_value": Decimal("20.00"), "minimum_order_value": Decimal("1999.00"), "maximum_discount": Decimal("800.00")},
+            {"code": "CURVYX20", "discount_type": "PERCENTAGE", "discount_value": Decimal("20.00"), "minimum_order_value": Decimal("1999.00"), "maximum_discount": Decimal("800.00")},
             {"code": "LUXE15", "discount_type": "PERCENTAGE", "discount_value": Decimal("15.00"), "minimum_order_value": Decimal("1499.00"), "maximum_discount": Decimal("500.00")},
             {"code": "SEXY25", "discount_type": "PERCENTAGE", "discount_value": Decimal("25.00"), "minimum_order_value": Decimal("2499.00"), "maximum_discount": Decimal("1000.00")},
             {"code": "FLAT500", "discount_type": "FIXED", "discount_value": Decimal("500.00"), "minimum_order_value": Decimal("2999.00"), "maximum_discount": Decimal("500.00")},
@@ -139,6 +139,7 @@ def clean_and_seed_catalog():
                 "slug": "corsets-shapewear",
                 "description": "Structure boned lace bustiers, hourglass waist cinchers, and open-bust curve sculpting bodysuits.",
                 "image_url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=80",
+                "is_active": False,
                 "children": [
                     {"name": "Lace Bustiers & Corsets", "slug": "bustier-corsets", "description": "Flexible boned waist definition with sweetheart neckline and underwire cups."},
                     {"name": "Curve Shaper Bodysuits", "slug": "body-sculptors", "description": "All-in-one open-bust firm compression bodysuits for instant hourglass shape."},
@@ -154,7 +155,7 @@ def clean_and_seed_catalog():
                 slug=cdata["slug"],
                 description=cdata["description"],
                 image_url=cdata["image_url"],
-                is_active=True
+                is_active=cdata.get("is_active", True)
             )
             db.add(cat)
             db.flush()
@@ -167,7 +168,7 @@ def clean_and_seed_catalog():
                     description=sub["description"],
                     parent_id=cat.id,
                     image_url=cat.image_url,
-                    is_active=True
+                    is_active=sub.get("is_active", cdata.get("is_active", True))
                 )
                 db.add(subcat)
                 db.flush()

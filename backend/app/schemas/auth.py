@@ -11,6 +11,11 @@ class UserLoginRequest(BaseModel):
     email: EmailStr
     password: str
 
+class GoogleAuthRequest(BaseModel):
+    credential: Optional[str] = None
+    email: Optional[EmailStr] = None
+    name: Optional[str] = None
+
 class AdminLoginRequest(BaseModel):
     email: EmailStr
     password: str

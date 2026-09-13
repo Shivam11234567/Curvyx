@@ -1,6 +1,6 @@
-# ELORA Intimates - Production-Grade Women's Innerwear Ecommerce Platform
+# Curvyx - Production-Grade Women's Innerwear Ecommerce Platform
 
-A production-grade, secure, multi-tier ecommerce platform architected for a women's innerwear brand.
+A production-grade, secure, multi-tier ecommerce platform architected for the Curvyx women's innerwear brand.
 
 ```
                     INTERNET
@@ -71,7 +71,7 @@ npm install
 npm run dev
 ```
 Admin Portal accessible at: [http://localhost:5173](http://localhost:5173)
-- **Admin Email**: `admin@auraintimates.com`
+- **Admin Email**: `admin@curvyx.com`
 - **Password**: `Admin@123456`
 
 ---

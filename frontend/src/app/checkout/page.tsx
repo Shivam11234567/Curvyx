@@ -124,7 +124,7 @@ export default function CheckoutPage() {
           key: paymentOrder.key_id,
           amount: Number(paymentOrder.amount) * 100,
           currency: paymentOrder.currency,
-          name: "ELORA Intimates",
+          name: "Curvyx",
           description: `Order #${order.order_number}`,
           order_id: paymentOrder.razorpay_order_id,
           prefill: {

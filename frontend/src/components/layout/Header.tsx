@@ -57,7 +57,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0 mr-4 lg:mr-8">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-neutral-700 hover:text-rose-600 rounded-md"
@@ -66,28 +66,22 @@ export default function Header() {
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            <Link href="/" className="flex flex-col">
-              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-neutral-900 uppercase">
-                ELORA
+            <Link href="/" className="flex flex-col group py-1">
+              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-neutral-900 uppercase group-hover:text-rose-700 transition-colors">
+                Curvyx
               </span>
-              <span className="text-[9px] tracking-[0.3em] font-sans text-rose-600 font-semibold uppercase -mt-1">
+              <span className="text-[9px] tracking-[0.3em] font-sans text-rose-600 font-semibold uppercase -mt-1 group-hover:tracking-[0.35em] transition-all">
                 Lingerie & Essentials
               </span>
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link
-              href="/"
-              className="text-sm font-medium tracking-wider text-neutral-700 hover:text-rose-600 uppercase transition-colors"
-            >
-              Home
-            </Link>
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {categories.slice(0, 5).map((cat) => (
               <div key={cat.id} className="relative group">
                 <Link
                   href={`/category/${cat.slug}`}
-                  className="flex items-center gap-1 text-sm font-medium tracking-wider text-neutral-700 group-hover:text-rose-600 uppercase transition-colors py-6"
+                  className="flex items-center gap-1.5 text-xs xl:text-sm font-semibold tracking-wider text-neutral-700 group-hover:text-rose-600 uppercase transition-colors py-6 whitespace-nowrap"
                 >
                   {cat.name}
                   {cat.children && cat.children.length > 0 && (

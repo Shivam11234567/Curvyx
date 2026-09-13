@@ -1,4 +1,4 @@
-# ELORA Intimates - Customer Storefront Frontend
+# Curvyx - Customer Storefront Frontend
 
 Modern luxury women's innerwear ecommerce storefront built using Next.js (App Router), TypeScript, Tailwind CSS, TanStack Query, and Razorpay Checkout.
 

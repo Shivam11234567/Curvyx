@@ -1,4 +1,4 @@
-# ELORA Intimates - Admin Management Dashboard
+# Curvyx - Admin Management Dashboard
 
 Administrative operations portal for managing the women's innerwear ecommerce ecosystem, built with React, Vite, TypeScript, Tailwind CSS, and TanStack Query.
 
@@ -31,7 +31,7 @@ cd admin_dashboard
 npm install
 npm run dev
 ```
-Visit [http://localhost:5173](http://localhost:5173) to access the admin portal. Default admin credentials: `admin@auraintimates.com` / `Admin@123456`.
+Visit [http://localhost:5173](http://localhost:5173) to access the admin portal. Default admin credentials: `admin@curvyx.com` / `Admin@123456`.
 
 ## Production Build
 ```bash

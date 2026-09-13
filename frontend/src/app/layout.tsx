@@ -9,9 +9,9 @@ import Footer from "@/components/layout/Footer";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 
 export const metadata: Metadata = {
-  title: "ELORA Intimates | Modern Luxury Women's Innerwear & Lingerie",
+  title: "Curvyx | Modern Luxury Women's Innerwear & Lingerie",
   description:
-    "Discover the ultimate blend of cloud-soft comfort and wire-free support with ELORA. Shop everyday bras, seamless t-shirt bras, modal panties, shapewear and luxury sleepwear.",
+    "Discover the ultimate blend of cloud-soft comfort and wire-free support with Curvyx. Shop everyday bras, seamless t-shirt bras, modal panties, shapewear and luxury sleepwear.",
   keywords: [
     "women innerwear",
     "bras",

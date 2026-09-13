@@ -10,7 +10,7 @@ class ApiClient {
 
   private getToken(): string | null {
     if (typeof window === "undefined") return null;
-    return localStorage.getItem("aura_customer_token");
+    return localStorage.getItem("curvyx_customer_token");
   }
 
   private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {

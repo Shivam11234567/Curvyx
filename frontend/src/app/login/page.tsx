@@ -4,6 +4,7 @@ import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@/features/auth/AuthContext";
+import { GoogleSignInButton } from "@/components/auth/GoogleSignInButton";
 import { Lock, Mail, ArrowRight, Loader2 } from "lucide-react";
 
 function LoginForm() {
@@ -36,7 +37,7 @@ function LoginForm() {
       <div className="w-full max-w-md bg-white rounded-3xl border border-rose-100 p-8 sm:p-10 shadow-xl space-y-6">
         <div className="text-center space-y-2">
           <span className="font-serif text-3xl font-bold tracking-widest text-neutral-900 uppercase">
-            ELORA
+            Curvyx
           </span>
           <h1 className="font-serif text-xl font-bold text-neutral-800">Welcome Back</h1>
           <p className="text-xs text-neutral-500">
@@ -108,6 +109,11 @@ function LoginForm() {
             )}
           </button>
         </form>
+
+        <GoogleSignInButton
+          redirectUrl={redirect}
+          buttonText="Sign in with Google"
+        />
 
         <div className="pt-4 border-t border-rose-50 text-center text-xs text-neutral-600">
           <span>Don’t have an account? </span>

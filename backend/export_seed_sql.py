@@ -12,7 +12,7 @@ tables = ['admin_users', 'users', 'coupons', 'categories', 'products', 'product_
 def export_sql():
     with engine.connect() as conn:
         with open('supabase_seed_data.sql', 'w', encoding='utf-8') as f:
-            f.write("-- Aura Intimates E-Commerce Luxury Lingerie Catalog Seed Data\n")
+            f.write("-- Curvyx E-Commerce Women's Innerwear Catalog Seed Data\n")
             f.write("-- Generated automatically\n\n")
             
             for table in tables:

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { productsApi } from "@/lib/api/products";
@@ -32,7 +33,7 @@ export default function CategoryPage() {
     min_price = 1200;
   }
 
-  const { data: category } = useQuery({
+  const { data: category, isLoading: isCategoryLoading, isError: isCategoryError } = useQuery({
     queryKey: ["category", slug],
     queryFn: () => categoriesApi.getBySlug(slug),
   });
@@ -84,6 +85,49 @@ export default function CategoryPage() {
     setSelectedColor("");
     setPriceRange("");
   };
+
+  if (!isCategoryLoading && (isCategoryError || !category)) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-20 text-center space-y-6">
+        <div className="w-16 h-16 mx-auto bg-rose-50 border border-rose-100 rounded-full flex items-center justify-center text-rose-500 shadow-sm">
+          <SlidersHorizontal className="w-7 h-7" />
+        </div>
+        <div className="space-y-2">
+          <span className="text-xs font-semibold tracking-widest text-rose-600 uppercase">Collection Notice</span>
+          <h1 className="font-serif text-3xl font-bold text-neutral-900">Collection Currently Unavailable</h1>
+          <p className="text-neutral-500 text-sm max-w-md mx-auto leading-relaxed">
+            This collection is currently hidden or undergoing curation. Please browse our active luxury lingerie collections below.
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center gap-3 pt-4">
+          <Link
+            href="/category/bras"
+            className="px-5 py-2.5 bg-rose-600 text-white text-xs font-bold uppercase rounded-full tracking-wider hover:bg-rose-700 transition-colors shadow-sm"
+          >
+            Bras & Bralettes
+          </Link>
+          <Link
+            href="/category/panties"
+            className="px-5 py-2.5 bg-white border border-rose-200 text-neutral-800 text-xs font-bold uppercase rounded-full tracking-wider hover:bg-rose-50 transition-colors"
+          >
+            Panties & Thongs
+          </Link>
+          <Link
+            href="/category/lingerie-sets"
+            className="px-5 py-2.5 bg-white border border-rose-200 text-neutral-800 text-xs font-bold uppercase rounded-full tracking-wider hover:bg-rose-50 transition-colors"
+          >
+            Lingerie Sets
+          </Link>
+          <Link
+            href="/"
+            className="px-5 py-2.5 bg-neutral-900 text-white text-xs font-bold uppercase rounded-full tracking-wider hover:bg-neutral-800 transition-colors"
+          >
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">

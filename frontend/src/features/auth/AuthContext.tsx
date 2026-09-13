@@ -9,6 +9,7 @@ interface AuthContextType {
   isLoading: boolean;
   login: (data: { email: string; password: string }) => Promise<void>;
   register: (data: { name: string; email: string; password: string; phone?: string }) => Promise<void>;
+  loginWithGoogle: (credential: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -19,13 +20,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("aura_customer_token");
+    const token = localStorage.getItem("curvyx_customer_token");
     if (token) {
       authApi
         .getProfile()
         .then((userData) => setUser(userData))
         .catch(() => {
-          localStorage.removeItem("aura_customer_token");
+          localStorage.removeItem("curvyx_customer_token");
           setUser(null);
         })
         .finally(() => setIsLoading(false));
@@ -36,13 +37,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (data: { email: string; password: string }) => {
     const res: AuthResponse = await authApi.login(data);
-    localStorage.setItem("aura_customer_token", res.token.access_token);
+    localStorage.setItem("curvyx_customer_token", res.token.access_token);
     setUser(res.user);
   };
 
   const register = async (data: { name: string; email: string; password: string; phone?: string }) => {
     const res: AuthResponse = await authApi.register(data);
-    localStorage.setItem("aura_customer_token", res.token.access_token);
+    localStorage.setItem("curvyx_customer_token", res.token.access_token);
+    setUser(res.user);
+  };
+
+  const loginWithGoogle = async (credential: string) => {
+    const res: AuthResponse = await authApi.googleAuth({ credential });
+    localStorage.setItem("curvyx_customer_token", res.token.access_token);
     setUser(res.user);
   };
 
@@ -52,13 +59,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch {
       // Ignore logout errors
     } finally {
-      localStorage.removeItem("aura_customer_token");
+      localStorage.removeItem("curvyx_customer_token");
       setUser(null);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, login, register, logout }}>
+    <AuthContext.Provider value={{ user, isLoading, login, register, loginWithGoogle, logout }}>
       {children}
     </AuthContext.Provider>
   );

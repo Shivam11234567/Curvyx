@@ -22,7 +22,7 @@ from app.services.payment_service import payment_service
 def generate_order_number() -> str:
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M")
     suffix = "".join(random.choices(string.ascii_uppercase + string.digits, k=4))
-    return f"ELORA-{timestamp}-{suffix}"
+    return f"CURVYX-{timestamp}-{suffix}"
 
 def create_order_from_cart(
     db: Session,

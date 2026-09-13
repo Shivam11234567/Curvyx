@@ -37,7 +37,7 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="ELORA Innerwear API",
+    title="Curvyx Innerwear API",
     description="Production-Grade Women's Innerwear Ecommerce Platform API",
     version="1.0.0",
     docs_url="/docs",

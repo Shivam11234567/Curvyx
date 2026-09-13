@@ -16,13 +16,13 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("aura_admin_token");
+    const token = localStorage.getItem("curvyx_admin_token");
     if (token) {
       adminAuthApi
         .getProfile()
         .then((data) => setAdmin(data))
         .catch(() => {
-          localStorage.removeItem("aura_admin_token");
+          localStorage.removeItem("curvyx_admin_token");
           setAdmin(null);
         })
         .finally(() => setIsLoading(false));
@@ -33,7 +33,7 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (data: { email: string; password: string }) => {
     const res: AdminAuthResponse = await adminAuthApi.login(data);
-    localStorage.setItem("aura_admin_token", res.token.access_token);
+    localStorage.setItem("curvyx_admin_token", res.token.access_token);
     setAdmin(res.admin);
   };
 
@@ -43,7 +43,7 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
     } catch {
       // Ignore
     } finally {
-      localStorage.removeItem("aura_admin_token");
+      localStorage.removeItem("curvyx_admin_token");
       setAdmin(null);
     }
   };

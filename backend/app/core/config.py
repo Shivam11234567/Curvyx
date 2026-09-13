@@ -1,5 +1,5 @@
 import os
-from typing import List, Union
+from typing import List, Union, Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import field_validator
 
@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
     ENVIRONMENT: str = "development"
     UPLOAD_DIR: str = "uploads"
+    GOOGLE_CLIENT_ID: Optional[str] = None
 
     model_config = SettingsConfigDict(
         env_file=".env",

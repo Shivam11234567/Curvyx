@@ -8,6 +8,9 @@ export const authApi = {
   login: (data: { email: string; password: string }) =>
     apiClient.post<AuthResponse>("/api/v1/auth/login", data),
 
+  googleAuth: (data: { credential?: string; email?: string; name?: string }) =>
+    apiClient.post<AuthResponse>("/api/v1/auth/google", data),
+
   logout: () => apiClient.post<{ message: string }>("/api/v1/auth/logout"),
 
   getProfile: () => apiClient.get<User>("/api/v1/auth/me"),

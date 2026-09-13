@@ -56,11 +56,11 @@ export default function AdminLayout() {
         <div className="h-20 flex items-center justify-between px-6 border-b border-slate-800">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center font-bold text-white text-sm">
-              E
+              C
             </div>
             <div>
               <span className="font-bold tracking-wider text-white uppercase text-sm block">
-                ELORA Admin
+                Curvyx Admin
               </span>
               <span className="text-[10px] text-slate-400 font-mono uppercase">Control Center</span>
             </div>
@@ -123,7 +123,7 @@ export default function AdminLayout() {
 
           <div className="hidden md:flex items-center gap-2 text-xs text-slate-500 font-medium">
             <span>Store:</span>
-            <span className="font-semibold text-slate-800">Elora Innerwear Online</span>
+            <span className="font-semibold text-slate-800">Curvyx Innerwear Online</span>
             <span className="w-2 h-2 rounded-full bg-emerald-500 ml-2" />
             <span className="text-emerald-700 font-bold">API Live</span>
           </div>

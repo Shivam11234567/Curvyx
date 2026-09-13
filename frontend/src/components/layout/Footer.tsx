@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           <div className="md:col-span-2 space-y-4">
             <span className="font-serif text-3xl font-bold tracking-widest text-white uppercase">
-              ELORA
+              Curvyx
             </span>
             <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">
               Elevating women’s everyday innerwear with cloud-soft fabrics, precision ergonomics, and non-restrictive support designed for timeless comfort.
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-rose-400" />
-                <span>concierge@eloraintimates.com</span>
+                <span>concierge@curvyx.com</span>
               </div>
             </div>
           </div>
@@ -85,7 +85,8 @@ export default function Footer() {
               <li><Link href="/category/panties" className="hover:text-rose-400 transition-colors">Panties & Thongs</Link></li>
               <li><Link href="/category/lingerie-sets" className="hover:text-rose-400 transition-colors">Lingerie Sets & Babydolls</Link></li>
               <li><Link href="/category/nightwear-loungewear" className="hover:text-rose-400 transition-colors">Nightwear & Loungewear</Link></li>
-              <li><Link href="/category/corsets-shapewear" className="hover:text-rose-400 transition-colors">Corsets & Shapewear</Link></li>
+              {/* Hidden: Corsets & Shapewear */}
+              {/* <li><Link href="/category/corsets-shapewear" className="hover:text-rose-400 transition-colors">Corsets & Shapewear</Link></li> */}
             </ul>
           </div>
 
@@ -118,14 +119,14 @@ export default function Footer() {
                 type="submit"
                 className="w-full py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-wider uppercase rounded-lg transition-colors"
               >
-                Join Elora Club
+                Join Curvyx Club
               </button>
             </form>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-neutral-800 text-center text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} ELORA Intimates Pvt Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Curvyx Pvt Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <span className="hover:text-neutral-400 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-neutral-400 cursor-pointer">Terms of Service</span>

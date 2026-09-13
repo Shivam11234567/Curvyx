@@ -1,6 +1,6 @@
-# ELORA Intimates - Python FastAPI Backend API
+# Curvyx - Python FastAPI Backend API
 
-Production-grade RESTful API backend powering the ELORA Women's Innerwear ecommerce platform, built using FastAPI, SQLAlchemy 2.x, PostgreSQL / SQLite (`DATABASE_URI`), Pydantic v2, JWT authentication, and Razorpay payment integration.
+Production-grade RESTful API backend powering the Curvyx Women's Innerwear ecommerce platform, built using FastAPI, SQLAlchemy 2.x, PostgreSQL / SQLite (`DATABASE_URI`), Pydantic v2, JWT authentication, and Razorpay payment integration.
 
 ## Technology Stack
 - **Framework**: FastAPI (Python 3.12+)

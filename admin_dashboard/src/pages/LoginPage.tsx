@@ -7,7 +7,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const { login } = useAdminAuth();
 
-  const [email, setEmail] = useState("admin@auraintimates.com");
+  const [email, setEmail] = useState("admin@curvyx.com");
   const [password, setPassword] = useState("Admin@123456");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ export default function LoginPage() {
             <Shield className="w-6 h-6" />
           </div>
           <h1 className="font-bold text-2xl text-slate-900 tracking-tight">
-            ELORA Management
+            Curvyx Management
           </h1>
           <p className="text-xs text-slate-500">
             Enter administrative credentials to manage store operations

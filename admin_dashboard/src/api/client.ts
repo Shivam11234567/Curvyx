@@ -11,7 +11,7 @@ class AdminApiClient {
 
   private getToken(): string | null {
     if (typeof window === "undefined") return null;
-    return localStorage.getItem("aura_admin_token");
+    return localStorage.getItem("curvyx_admin_token");
   }
 
   private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {

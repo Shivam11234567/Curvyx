@@ -39,11 +39,12 @@ export default function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16 md:space-y-24 pb-16 sm:pb-20">
       <section className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[680px] flex items-center bg-gradient-to-r from-rose-950 via-neutral-900 to-rose-950 text-white overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
+        <div className="absolute inset-0 z-0 opacity-30 mix-blend-overlay pointer-events-none select-none">
           <img
             src="https://images.unsplash.com/photo-1596489370002-3cbe9d9cce54?w=1600&auto=format&fit=crop&q=80"
-            alt="Elora Luxury Innerwear"
-            className="w-full h-full object-cover object-center"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover object-center text-transparent"
           />
         </div>
 

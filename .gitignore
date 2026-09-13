@@ -49,3 +49,9 @@ lerna-debug.log*
 Thumbs.db
 .idea/
 .vscode/
+*.tsbuildinfo
+*.db
+*.sqlite
+*.sqlite3
+uploads/
+

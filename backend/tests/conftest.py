@@ -34,7 +34,7 @@ def setup_test_db():
 
     admin = AdminUser(
         name="Admin Test",
-        email="admintest@auraintimates.com",
+        email="admintest@curvyx.com",
         password_hash=get_password_hash("AdminPass123"),
         role="admin",
         is_active=True
@@ -152,7 +152,7 @@ def customer_token(client):
 @pytest.fixture
 def admin_token(client):
     res = client.post("/api/v1/admin/auth/login", json={
-        "email": "admintest@auraintimates.com",
+        "email": "admintest@curvyx.com",
         "password": "AdminPass123"
     })
     return res.json()["data"]["token"]["access_token"]
