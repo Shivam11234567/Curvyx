@@ -2,10 +2,23 @@ import { CONFIG } from "@/config";
 import { ApiResponse } from "@/types";
 
 class ApiClient {
-  private baseUrl: string;
-
-  constructor() {
-    this.baseUrl = CONFIG.API_URL;
+  private getBaseUrl(): string {
+    if (process.env.NEXT_PUBLIC_API_URL) {
+      return process.env.NEXT_PUBLIC_API_URL;
+    }
+    if (typeof window !== "undefined") {
+      if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+        return "http://localhost:8000";
+      }
+      return "";
+    }
+    if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+      return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+    }
+    if (process.env.VERCEL_URL) {
+      return `https://${process.env.VERCEL_URL}`;
+    }
+    return "http://localhost:8000";
   }
 
   private getToken(): string | null {
@@ -14,7 +27,7 @@ class ApiClient {
   }
 
   private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-    const url = `${this.baseUrl}${endpoint}`;
+    const url = `${this.getBaseUrl()}${endpoint}`;
     const token = this.getToken();
 
     const headers: Record<string, string> = {
