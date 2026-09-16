@@ -24,7 +24,7 @@ export default function CheckoutPage() {
   const queryClient = useQueryClient();
 
   const [selectedAddressId, setSelectedAddressId] = useState<string>("");
-  const [paymentMethod, setPaymentMethod] = useState<"RAZORPAY" | "COD">("COD");
+  const [paymentMethod, setPaymentMethod] = useState<"RAZORPAY" | "COD">("RAZORPAY");
   const [isAddingNewAddress, setIsAddingNewAddress] = useState<boolean>(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState<boolean>(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
@@ -403,16 +403,81 @@ export default function CheckoutPage() {
               2. Select Payment Method
             </h2>
             <div className="space-y-3">
-              {/* Cash On Delivery (COD) - Active */}
+              {/* Razorpay Online Payment */}
               <div
-                onClick={() => setPaymentMethod("COD")}
-                className={`p-4 rounded-xl border-2 transition-all cursor-pointer flex items-start justify-between gap-3 ${paymentMethod === "COD"
-                    ? "border-rose-600 bg-rose-50/40 shadow-sm"
-                    : "border-neutral-200 hover:border-neutral-300"
-                  }`}
+                onClick={() => setPaymentMethod("RAZORPAY")}
+                className={`p-4 rounded-xl border transition-all cursor-pointer flex items-start justify-between gap-3 ${
+                  paymentMethod === "RAZORPAY"
+                    ? "border-rose-500 bg-rose-50/50 shadow-sm"
+                    : "border-neutral-200 hover:border-neutral-300 bg-white"
+                }`}
               >
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 p-2 bg-rose-100 text-rose-600 rounded-lg">
+                  <div
+                    className={`mt-0.5 p-2 rounded-lg ${
+                      paymentMethod === "RAZORPAY"
+                        ? "bg-rose-600 text-white"
+                        : "bg-neutral-100 text-neutral-600"
+                    }`}
+                  >
+                    <CreditCard className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-bold text-neutral-900">
+                        Online Payment (Razorpay)
+                      </p>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-100 text-rose-800">
+                        Instant & Secure
+                      </span>
+                    </div>
+                    <p className="text-xs text-neutral-500 mt-1">
+                      Pay instantly via UPI (GPay, PhonePe, Paytm), Credit/Debit Cards, NetBanking, or Wallets.
+                    </p>
+                    <div className="flex items-center gap-1.5 mt-2 flex-wrap">
+                      {["UPI", "GPay", "PhonePe", "Cards", "NetBanking"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-0.5 bg-white border border-rose-200/80 rounded text-[9px] font-semibold text-neutral-600"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-1">
+                  <div
+                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                      paymentMethod === "RAZORPAY"
+                        ? "border-rose-600"
+                        : "border-neutral-300"
+                    }`}
+                  >
+                    {paymentMethod === "RAZORPAY" && (
+                      <div className="w-2.5 h-2.5 rounded-full bg-rose-600" />
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Cash On Delivery (COD) */}
+              <div
+                onClick={() => setPaymentMethod("COD")}
+                className={`p-4 rounded-xl border transition-all cursor-pointer flex items-start justify-between gap-3 ${
+                  paymentMethod === "COD"
+                    ? "border-rose-500 bg-rose-50/50 shadow-sm"
+                    : "border-neutral-200 hover:border-neutral-300 bg-white"
+                }`}
+              >
+                <div className="flex items-start gap-3">
+                  <div
+                    className={`mt-0.5 p-2 rounded-lg ${
+                      paymentMethod === "COD"
+                        ? "bg-rose-600 text-white"
+                        : "bg-neutral-100 text-neutral-600"
+                    }`}
+                  >
                     <Banknote className="w-5 h-5" />
                   </div>
                   <div>
@@ -428,34 +493,17 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 <div className="mt-1">
-                  <div className="w-5 h-5 rounded-full border-2 border-rose-600 flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 rounded-full bg-rose-600" />
+                  <div
+                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                      paymentMethod === "COD"
+                        ? "border-rose-600"
+                        : "border-neutral-300"
+                    }`}
+                  >
+                    {paymentMethod === "COD" && (
+                      <div className="w-2.5 h-2.5 rounded-full bg-rose-600" />
+                    )}
                   </div>
-                </div>
-              </div>
-
-              {/* Razorpay Online Payment - Disabled / Future Feature */}
-              <div className="p-4 rounded-xl border border-dashed border-neutral-300 bg-neutral-50/80 opacity-75 cursor-not-allowed flex items-start justify-between gap-3 select-none">
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 p-2 bg-neutral-200 text-neutral-500 rounded-lg">
-                    <CreditCard className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm font-bold text-neutral-600">
-                        Online Payment (Cards, UPI, NetBanking)
-                      </p>
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-neutral-200 text-neutral-600">
-                        Coming Soon
-                      </span>
-                    </div>
-                    <p className="text-xs text-neutral-400 mt-1">
-                      Razorpay gateway integration is temporarily disabled and will be enabled in upcoming releases.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-1">
-                  <div className="w-5 h-5 rounded-full border-2 border-neutral-300" />
                 </div>
               </div>
             </div>

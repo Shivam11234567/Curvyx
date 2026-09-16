@@ -19,7 +19,7 @@ const getBaseApiUrl = () => {
 
 export const CONFIG = {
   API_URL: getBaseApiUrl(),
-  RAZORPAY_KEY_ID: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_placeholder",
+  RAZORPAY_KEY_ID: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_TcioyrvjYbpf2M",
   BRAND_NAME: "Curvyx",
   TAGLINE: "Comfort, Elegance & Confidence for Every Curve",
 };

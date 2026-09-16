@@ -9,8 +9,8 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
     CORS_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173,https://curvyx.vercel.app,https://curvyx-2qrx.vercel.app,*"
-    RAZORPAY_KEY_ID: str = "rzp_test_placeholder"
-    RAZORPAY_KEY_SECRET: str = "rzp_test_secret"
+    RAZORPAY_KEY_ID: str = "rzp_test_TcioyrvjYbpf2M"
+    RAZORPAY_KEY_SECRET: str = "QaSJjjrmzjvIbaP9Yn2iIYMx"
     RAZORPAY_WEBHOOK_SECRET: str = "rzp_test_webhook"
     STORAGE_ENDPOINT: str = ""
     STORAGE_ACCESS_KEY: str = ""
