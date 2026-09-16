@@ -44,7 +44,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AdminAuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/admin">
           <Routes>
             <Route path="/login" element={<LoginPage />} />
 

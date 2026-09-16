@@ -7,6 +7,9 @@
     "backend": {
       "root": "backend",
       "entrypoint": "api/index.py"
+    },
+    "admin": {
+      "root": "admin_dashboard"
     }
   },
   "rewrites": [
@@ -32,6 +35,18 @@
       "source": "/openapi.json",
       "destination": {
         "service": "backend"
+      }
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": {
+        "service": "admin"
+      }
+    },
+    {
+      "source": "/admin",
+      "destination": {
+        "service": "admin"
       }
     },
     {
