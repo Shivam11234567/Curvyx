@@ -7,11 +7,11 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { cartApi } from "@/lib/api/cart";
 import { useAuth } from "@/features/auth/AuthContext";
 import { formatCurrency } from "@/lib/utils";
-import { ShoppingBag, Trash2, ArrowRight, Tag, ShieldCheck } from "lucide-react";
+import { ShoppingBag, Trash2, ArrowRight, Tag, ShieldCheck, Loader2 } from "lucide-react";
 
 export default function CartPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
   const queryClient = useQueryClient();
 
   const [couponInput, setCouponInput] = useState<string>("");
@@ -47,6 +47,17 @@ export default function CartPage() {
     setCouponInput("");
     setCouponError(null);
   };
+
+  if (isAuthLoading) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4">
+        <Loader2 className="w-8 h-8 text-rose-600 animate-spin" />
+        <p className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">
+          Loading bag...
+        </p>
+      </div>
+    );
+  }
 
   if (!user) {
     return (

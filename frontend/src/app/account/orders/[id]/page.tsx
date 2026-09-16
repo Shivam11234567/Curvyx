@@ -1,8 +1,8 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Link from "next/link";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { ordersApi } from "@/lib/api/orders";
 import { useAuth } from "@/features/auth/AuthContext";
@@ -16,20 +16,39 @@ import {
   ArrowLeft,
   Truck,
   ShieldCheck,
+  Loader2,
 } from "lucide-react";
 
 function OrderDetailContent() {
+  const router = useRouter();
   const params = useParams();
   const searchParams = useSearchParams();
   const orderId = params.id as string;
   const isJustConfirmed = searchParams.get("success") === "true";
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
+
+  useEffect(() => {
+    if (!isAuthLoading && !user) {
+      router.replace(`/login?redirect=/account/orders/${orderId}`);
+    }
+  }, [user, isAuthLoading, router, orderId]);
 
   const { data: order, isLoading } = useQuery({
     queryKey: ["order", orderId],
     queryFn: () => ordersApi.getById(orderId),
     enabled: !!user && !!orderId,
   });
+
+  if (isAuthLoading || !user) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4">
+        <Loader2 className="w-8 h-8 text-rose-600 animate-spin" />
+        <p className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">
+          Verifying session...
+        </p>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (

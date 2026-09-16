@@ -1,17 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { addressesApi } from "@/lib/api/addresses";
 import { useAuth } from "@/features/auth/AuthContext";
-import { User, MapPin, Package, LogOut, Plus, Trash2, CheckCircle2 } from "lucide-react";
+import { User, MapPin, Package, LogOut, Plus, Trash2, Loader2 } from "lucide-react";
 
 export default function AccountPage() {
   const router = useRouter();
-  const { user, logout } = useAuth();
+  const { user, isLoading: isAuthLoading, logout } = useAuth();
   const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (!isAuthLoading && !user) {
+      router.replace("/login?redirect=/account");
+    }
+  }, [user, isAuthLoading, router]);
 
   const [isAddingAddress, setIsAddingAddress] = useState(false);
   const [newAddress, setNewAddress] = useState({
@@ -56,31 +62,28 @@ export default function AccountPage() {
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ["addresses"] }),
   });
 
-  if (!user) {
+  if (isAuthLoading || !user) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center space-y-4">
-        <h1 className="font-serif text-2xl font-bold text-neutral-900">Sign in to Access Your Account</h1>
-        <button
-          onClick={() => router.push("/login?redirect=/account")}
-          className="px-8 py-3 bg-rose-600 text-white rounded-full text-xs font-semibold uppercase tracking-wider"
-        >
-          Sign In
-        </button>
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4">
+        <Loader2 className="w-8 h-8 text-rose-600 animate-spin" />
+        <p className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">
+          Verifying session...
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-6 sm:space-y-10">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-rose-100">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-neutral-900">My Account</h1>
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900">My Account</h1>
           <p className="text-xs text-neutral-500 mt-1">Manage profile, addresses, and view order history</p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-2.5 sm:gap-3">
           <Link
             href="/account/orders"
-            className="flex items-center gap-2 px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold rounded-full uppercase tracking-wider transition-colors"
+            className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold rounded-full uppercase tracking-wider transition-colors"
           >
             <Package className="w-4 h-4" />
             <span>My Orders</span>
@@ -90,7 +93,7 @@ export default function AccountPage() {
               logout();
               router.push("/");
             }}
-            className="flex items-center gap-1.5 px-4 py-2.5 border border-red-200 text-red-600 hover:bg-red-50 text-xs font-semibold rounded-full uppercase tracking-wider transition-colors"
+            className="flex items-center gap-1.5 px-4 sm:px-4 py-2 sm:py-2.5 border border-red-200 text-red-600 hover:bg-red-50 text-xs font-semibold rounded-full uppercase tracking-wider transition-colors"
           >
             <LogOut className="w-4 h-4" />
             <span>Logout</span>
@@ -189,7 +192,7 @@ export default function AccountPage() {
                 onChange={(e) => setNewAddress({ ...newAddress, address_line_2: e.target.value })}
                 className="w-full px-3 py-2 bg-white border border-neutral-200 rounded-xl text-xs"
               />
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <input
                   type="text"
                   required

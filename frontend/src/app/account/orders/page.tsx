@@ -1,17 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { ordersApi } from "@/lib/api/orders";
 import { useAuth } from "@/features/auth/AuthContext";
 import { formatCurrency } from "@/lib/utils";
-import { Package, ArrowRight, Clock, CheckCircle2, Truck, AlertCircle } from "lucide-react";
+import { Package, ArrowRight, Clock, CheckCircle2, Truck, AlertCircle, Loader2 } from "lucide-react";
 
 export default function OrdersListPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
+
+  useEffect(() => {
+    if (!isAuthLoading && !user) {
+      router.replace("/login?redirect=/account/orders");
+    }
+  }, [user, isAuthLoading, router]);
 
   const { data: orders = [], isLoading } = useQuery({
     queryKey: ["orders"],
@@ -19,16 +25,13 @@ export default function OrdersListPage() {
     enabled: !!user,
   });
 
-  if (!user) {
+  if (isAuthLoading || !user) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center space-y-4">
-        <h1 className="font-serif text-2xl font-bold text-neutral-900">Sign in to View Your Orders</h1>
-        <button
-          onClick={() => router.push("/login?redirect=/account/orders")}
-          className="px-8 py-3 bg-rose-600 text-white rounded-full text-xs font-semibold uppercase tracking-wider"
-        >
-          Sign In
-        </button>
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4">
+        <Loader2 className="w-8 h-8 text-rose-600 animate-spin" />
+        <p className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">
+          Verifying session...
+        </p>
       </div>
     );
   }

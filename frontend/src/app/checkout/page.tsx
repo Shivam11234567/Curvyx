@@ -20,7 +20,7 @@ declare global {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
   const queryClient = useQueryClient();
 
   const [selectedAddressId, setSelectedAddressId] = useState<string>("");
@@ -28,6 +28,12 @@ export default function CheckoutPage() {
   const [isAddingNewAddress, setIsAddingNewAddress] = useState<boolean>(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState<boolean>(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
+
+  React.useEffect(() => {
+    if (!isAuthLoading && !user) {
+      router.replace("/login?redirect=/checkout");
+    }
+  }, [user, isAuthLoading, router]);
 
   const [newAddress, setNewAddress] = useState({
     name: "",
@@ -59,6 +65,17 @@ export default function CheckoutPage() {
       setSelectedAddressId(defaultAddr.id);
     }
   }, [addresses, selectedAddressId]);
+
+  if (isAuthLoading || !user) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4">
+        <Loader2 className="w-8 h-8 text-rose-600 animate-spin" />
+        <p className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">
+          Verifying session...
+        </p>
+      </div>
+    );
+  }
 
   const addAddressMutation = useMutation({
     mutationFn: (data: typeof newAddress) => addressesApi.create(data),
