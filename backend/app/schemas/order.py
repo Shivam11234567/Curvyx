@@ -36,6 +36,8 @@ class OrderResponse(BaseModel):
     payment_status: str
     order_status: str
     payment_method: Optional[str] = "RAZORPAY"
+    razorpay_order_id: Optional[str] = None
+    razorpay_payment_id: Optional[str] = None
     shipping_address_snapshot: Dict[str, Any]
     items_count: Optional[int] = 0
     created_at: datetime
@@ -46,8 +48,6 @@ class OrderResponse(BaseModel):
 
 class OrderDetailResponse(OrderResponse):
     items: List[OrderItemResponse] = []
-    razorpay_order_id: Optional[str] = None
-    razorpay_payment_id: Optional[str] = None
 
 class UpdateOrderStatusRequest(BaseModel):
     order_status: Optional[str] = None
