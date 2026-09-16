@@ -110,9 +110,9 @@ export default function MobileBottomNav() {
       {/* Floating Bottom Navigation Bar */}
       <nav
         aria-label="Mobile Navigation"
-        className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-rose-100/80 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-2"
+        className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-rose-100/80 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-1 sm:px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]"
       >
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-around max-w-lg mx-auto">
           <Link
             href="/"
             className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"

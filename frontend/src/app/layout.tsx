@@ -32,10 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <script src="https://checkout.razorpay.com/v1/checkout.js" async />
       </head>
-      <body className="flex flex-col min-h-screen pb-16 lg:pb-0">
+      <body className="flex flex-col min-h-screen pb-20 lg:pb-0 font-sans antialiased text-neutral-900 bg-white">
         <QueryProvider>
           <AuthProvider>
             <AnnouncementBar />
