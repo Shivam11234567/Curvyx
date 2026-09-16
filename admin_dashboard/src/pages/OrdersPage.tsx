@@ -133,10 +133,17 @@ export default function OrdersPage() {
                             <span>COD</span>
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">
-                            <CreditCard className="w-3 h-3 text-indigo-600" />
-                            <span>Razorpay</span>
-                          </span>
+                          <div>
+                            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">
+                              <CreditCard className="w-3 h-3 text-indigo-600" />
+                              <span>Razorpay</span>
+                            </span>
+                            {ord.razorpay_payment_id && (
+                              <p className="font-mono text-[10px] text-indigo-600 mt-0.5 truncate max-w-[130px]" title={ord.razorpay_payment_id}>
+                                {ord.razorpay_payment_id}
+                              </p>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 font-bold text-slate-900 font-sans">

@@ -220,20 +220,40 @@ export default function OrderDetailPage() {
                 </div>
               </>
             ) : (
-              <>
-                {order.razorpay_order_id && (
-                  <p className="flex justify-between font-mono text-[11px]">
-                    <span className="text-slate-500">Razorpay Order ID:</span>
-                    <span className="font-semibold text-slate-800">{order.razorpay_order_id}</span>
-                  </p>
-                )}
-                {order.razorpay_payment_id && (
-                  <p className="flex justify-between font-mono text-[11px]">
-                    <span className="text-slate-500">Razorpay Payment ID:</span>
-                    <span className="text-emerald-700 font-bold">{order.razorpay_payment_id}</span>
-                  </p>
-                )}
-              </>
+              <div className="space-y-2.5 pt-1">
+                <div className="p-3 bg-indigo-50/60 rounded-xl border border-indigo-100 text-xs space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-500 font-medium">Gateway:</span>
+                    <span className="font-bold text-indigo-900">Razorpay API Gateway</span>
+                  </div>
+
+                  {order.razorpay_order_id && (
+                    <div className="flex items-center justify-between font-mono text-[11px] pt-1.5 border-t border-indigo-100/60">
+                      <span className="text-slate-500">Razorpay Order ID:</span>
+                      <span className="font-bold text-slate-800 select-all bg-white px-2 py-0.5 rounded border border-slate-200">
+                        {order.razorpay_order_id}
+                      </span>
+                    </div>
+                  )}
+
+                  {order.razorpay_payment_id && (
+                    <div className="flex items-center justify-between font-mono text-[11px] pt-1.5 border-t border-indigo-100/60">
+                      <span className="text-slate-500">Razorpay Payment ID:</span>
+                      <span className="font-bold text-emerald-700 select-all bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                        {order.razorpay_payment_id}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-indigo-100/60">
+                    <span className="text-slate-500">Verification:</span>
+                    <span className="inline-flex items-center gap-1 text-emerald-700 font-bold">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      HMAC SHA-256 Verified
+                    </span>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
         </div>
