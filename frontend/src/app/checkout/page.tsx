@@ -358,11 +358,10 @@ export default function CheckoutPage() {
                   <div
                     key={addr.id}
                     onClick={() => setSelectedAddressId(addr.id)}
-                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
-                      selectedAddressId === addr.id
+                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${selectedAddressId === addr.id
                         ? "border-rose-600 bg-rose-50/40 ring-2 ring-rose-100"
                         : "border-neutral-200 bg-white hover:border-rose-200"
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start justify-between">
                       <p className="text-xs font-bold text-neutral-900">{addr.name}</p>
@@ -390,11 +389,10 @@ export default function CheckoutPage() {
               {/* Cash On Delivery (COD) - Active */}
               <div
                 onClick={() => setPaymentMethod("COD")}
-                className={`p-4 rounded-xl border-2 transition-all cursor-pointer flex items-start justify-between gap-3 ${
-                  paymentMethod === "COD"
+                className={`p-4 rounded-xl border-2 transition-all cursor-pointer flex items-start justify-between gap-3 ${paymentMethod === "COD"
                     ? "border-rose-600 bg-rose-50/40 shadow-sm"
                     : "border-neutral-200 hover:border-neutral-300"
-                }`}
+                  }`}
               >
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5 p-2 bg-rose-100 text-rose-600 rounded-lg">

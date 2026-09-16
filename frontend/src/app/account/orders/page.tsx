@@ -80,13 +80,12 @@ export default function OrdersListPage() {
                     {ord.order_number}
                   </span>
                   <span
-                    className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-                      ord.order_status === "DELIVERED"
+                    className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${ord.order_status === "DELIVERED"
                         ? "bg-emerald-100 text-emerald-800"
                         : ord.order_status === "CONFIRMED" || ord.order_status === "PROCESSING"
-                        ? "bg-blue-100 text-blue-800"
-                        : "bg-amber-100 text-amber-800"
-                    }`}
+                          ? "bg-blue-100 text-blue-800"
+                          : "bg-amber-100 text-amber-800"
+                      }`}
                   >
                     {ord.order_status}
                   </span>

@@ -71,11 +71,10 @@ export default function ProductCard({ product, isWishlisted = false }: ProductCa
 
         <button
           onClick={handleWishlistToggle}
-          className={`absolute top-2.5 right-2.5 sm:top-3 sm:right-3 p-1.5 sm:p-2 rounded-full backdrop-blur-md transition-all duration-200 z-10 ${
-            isWishlisted
-              ? "bg-rose-600 text-white shadow-md"
-              : "bg-white/80 text-neutral-600 hover:text-rose-600 hover:bg-white shadow-sm"
-          }`}
+          className={`absolute top-2.5 right-2.5 sm:top-3 sm:right-3 p-1.5 sm:p-2 rounded-full backdrop-blur-md transition-all duration-200 z-10 ${isWishlisted
+            ? "bg-rose-600 text-white shadow-md"
+            : "bg-white/80 text-neutral-600 hover:text-rose-600 hover:bg-white shadow-sm"
+            }`}
           aria-label="Add to Wishlist"
         >
           <Heart className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${isWishlisted ? "fill-current" : ""}`} />

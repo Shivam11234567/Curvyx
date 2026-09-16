@@ -1,0 +1,927 @@
+{
+  "announcements": [
+    "Free Shipping on all orders above ₹499",
+    "Welcome to our store",
+    "Flat 20% off on selected style only",
+    "BUY 2 GET 1 FREE on Select Innerwear",
+    "Unwind in Our New Loungewear Picks"
+  ],
+  "navigation": [
+    {
+      "title": "Women",
+      "handle": "women",
+      "featured": true,
+      "banner": "https://ebodycare.in/cdn/shop/files/Women-Tab-Banner-369-x-298.jpg?v=1724479493",
+      "subcategories": [
+        {
+          "title": "Bras",
+          "items": [
+            "All Bras",
+            "T-Shirt Bras",
+            "Padded Bras",
+            "Non-Padded Bras",
+            "Sports Bras",
+            "Front Open Bras",
+            "Feeding / Maternity Bras",
+            "Bridal Bras",
+            "Bralettes"
+          ]
+        },
+        {
+          "title": "Panties",
+          "items": [
+            "All Panties",
+            "Bikini Panty",
+            "Hipster Panty",
+            "Boy Shorts",
+            "Seamless Panty",
+            "High Waist Shaper",
+            "Period Panties",
+            "Pack of 3 / 5"
+          ]
+        },
+        {
+          "title": "Activewear & Loungewear",
+          "items": [
+            "Track Pants",
+            "T-Shirts",
+            "Capris & Shorts",
+            "Yoga Pants",
+            "Night Suits",
+            "Camisoles & Slips"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Men",
+      "handle": "men",
+      "featured": true,
+      "banner": "https://ebodycare.in/cdn/shop/files/Men-Tab-650-x-551.jpg?v=1724479678",
+      "subcategories": [
+        {
+          "title": "Underwear",
+          "items": [
+            "Trunks",
+            "Briefs",
+            "Boxers",
+            "Solid Trunks",
+            "Printed Trunks",
+            "Micro Modal Series"
+          ]
+        },
+        {
+          "title": "Vests",
+          "items": [
+            "Gym Vests",
+            "Square Neck Vests",
+            "Ribbed Vests",
+            "Sleeved Vests",
+            "White Regular Vests"
+          ]
+        },
+        {
+          "title": "Athleisure & Essentials",
+          "items": [
+            "Trackpants",
+            "Joggers",
+            "T-Shirts",
+            "Shorts",
+            "Handkerchiefs",
+            "Masks"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Athleisure",
+      "handle": "athleisure",
+      "subcategories": [
+        {
+          "title": "Women Athleisure",
+          "items": [
+            "High Waist Yoga Pants",
+            "Gym Trackpants",
+            "Cotton Shorts",
+            "Active Tanks",
+            "Sports Bras"
+          ]
+        },
+        {
+          "title": "Men Athleisure",
+          "items": [
+            "Poly-Spandex Trackpants",
+            "V-Neck T-Shirts",
+            "Active Shorts",
+            "Training Tanks"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Perfume & Deos",
+      "handle": "perfume",
+      "subcategories": [
+        {
+          "title": "Women Fragrances",
+          "items": [
+            "Tanza EDP 25ml",
+            "Coral Rose Noir Mist Combo",
+            "Fruity Fresh Mist"
+          ]
+        },
+        {
+          "title": "Men Fragrances",
+          "items": [
+            "Opel EDP 25ml",
+            "Topaz EDP 25ml",
+            "Xpression Deo + Perfume Combo",
+            "Xtacy Deo"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Offers & Combos",
+      "handle": "offers",
+      "badge": "Sale 20%",
+      "subcategories": [
+        {
+          "title": "Special Deals",
+          "items": [
+            "BUY 2 GET 1 FREE",
+            "Flat 20% Off Styles",
+            "Packs of 3 & 5 Value Combos",
+            "Freebie Deals"
+          ]
+        }
+      ]
+    }
+  ],
+  "heroSlides": [
+    {
+      "id": 1,
+      "title": "Find Your Perfect Fit Today",
+      "subtitle": "Comfort Crafted by Bodycare",
+      "description": "Everyday premium essentials engineered with featherlight fabrics and breathable comfort.",
+      "desktopImage": "https://ebodycare.in/cdn/shop/files/Women-Innerwear-Landing-page-1920-x-890.jpg?v=1774016891",
+      "mobileImage": "https://ebodycare.in/cdn/shop/files/Bodycare-Catagory-Banner-519-x-667_99247efa-e458-436c-b397-13778e0b5f80_2000x.jpg?v=1772262988",
+      "ctaText": "Shop Women's",
+      "ctaLink": "/collections/women",
+      "tag": "Trending Collection"
+    },
+    {
+      "id": 2,
+      "title": "Men's Innerwear. Comfort Redefined.",
+      "subtitle": "BodyX Super Combed Micro Modal",
+      "description": "Engineered for all-day support, breathability, zero chafing, and effortless wear.",
+      "desktopImage": "https://ebodycare.in/cdn/shop/files/Men-innerwear-1465-x-610_fd1279bd-2d9f-4bb4-af63-1f72c9878551.jpg?v=1773210686",
+      "mobileImage": "https://ebodycare.in/cdn/shop/files/BodyX-Catagory-Banner-519-x-667_d19e97a9-9aff-41a6-a261-6a1154d8b405_2000x.jpg?v=1772263077",
+      "ctaText": "Explore BodyX",
+      "ctaLink": "/collections/men",
+      "tag": "New Launch"
+    },
+    {
+      "id": 3,
+      "title": "Built For Motion - BodyActive",
+      "subtitle": "Activewear & Athleisure",
+      "description": "Shorts, Trackpants, Capris & T-Shirts made for workout, running, and all-day lounging.",
+      "desktopImage": "https://ebodycare.in/cdn/shop/files/Bodyactive-1465-x-610_f5f3a590-a5ef-4734-8f67-b2ab44032fca.jpg?v=1773210530",
+      "mobileImage": "https://ebodycare.in/cdn/shop/files/Sportswear-Catagory-Banner-519-x-667_1461cb91-02b2-4ef2-96bd-45b79afd25ca_2000x.jpg?v=1772436802",
+      "ctaText": "Shop BodyActive",
+      "ctaLink": "/collections/athleisure",
+      "tag": "Active Series"
+    }
+  ],
+  "quickCategories": [
+    {
+      "name": "Women Innerwear",
+      "image": "https://ebodycare.in/cdn/shop/files/Bodycare-Catagory-Banner-519-x-667_99247efa-e458-436c-b397-13778e0b5f80_2000x.jpg?v=1772262988",
+      "count": "120+ Styles",
+      "tag": "Bodycare"
+    },
+    {
+      "name": "Men Undergarments",
+      "image": "https://ebodycare.in/cdn/shop/files/BodyX-Catagory-Banner-519-x-667_d19e97a9-9aff-41a6-a261-6a1154d8b405_2000x.jpg?v=1772263077",
+      "count": "80+ Styles",
+      "tag": "BodyX"
+    },
+    {
+      "name": "Sportswear & Athleisure",
+      "image": "https://ebodycare.in/cdn/shop/files/Sportswear-Catagory-Banner-519-x-667_1461cb91-02b2-4ef2-96bd-45b79afd25ca_2000x.jpg?v=1772436802",
+      "count": "95+ Styles",
+      "tag": "BodyActive"
+    },
+    {
+      "name": "Perfume & Mists",
+      "image": "https://ebodycare.in/cdn/shop/files/fsfasfasfas.png?v=1720687873",
+      "count": "30+ Scents",
+      "tag": "Fragrance"
+    },
+    {
+      "name": "Loungewear & Nightwear",
+      "image": "https://ebodycare.in/cdn/shop/files/Bodyactive-Women-Capri-Small-325-x-443_16-01-23.jpg?v=1721371539",
+      "count": "45+ Styles",
+      "tag": "Comfort"
+    },
+    {
+      "name": "Value Packs & Combos",
+      "image": "https://ebodycare.in/cdn/shop/files/Bodyactive-Men-Shorts-Small-325-x-443_16-01-23.jpg?v=1721371570",
+      "count": "Buy 2 Get 1",
+      "tag": "Offers"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Perfect Coverage Bra-1517S",
+      "handle": "perfect-coverage-bra-1517s",
+      "category": "Bras",
+      "brand": "Bodycare",
+      "price": 389,
+      "originalPrice": 499,
+      "discount": "22% OFF",
+      "rating": 4.8,
+      "reviewsCount": 342,
+      "badge": "Bestseller",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/1517S_1_ab25f7c9-0d38-4efc-afe1-95f2740c00a1_large.jpg?v=1742719811",
+        "https://ebodycare.in/cdn/shop/files/1517S_2_5593fd7d-7718-4b71-add5-7df4dcff14c7_large.jpg?v=1742719811",
+        "https://ebodycare.in/cdn/shop/files/1517S_3_9eac48e2-81ec-4e0e-b0a3-2082a02c9491_large.jpg?v=1742719811"
+      ],
+      "colors": [
+        "#f5d0b5",
+        "#000000",
+        "#ffffff",
+        "#8b263e"
+      ],
+      "sizes": [
+        "30B",
+        "32B",
+        "34B",
+        "36B",
+        "38B",
+        "40C"
+      ],
+      "isNew": false,
+      "tab": "women"
+    },
+    {
+      "id": "prod-2",
+      "name": "Bodycare Non Padded Front Open Bra-1568 (White)",
+      "handle": "bodycare-non-padded-front-open-bra-1568-white",
+      "category": "Bras",
+      "brand": "Bodycare",
+      "price": 449,
+      "originalPrice": 599,
+      "discount": "25% OFF",
+      "rating": 4.9,
+      "reviewsCount": 512,
+      "badge": "Top Rated",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/1568WBW-3PCS_Color_2_1_03eecb33-514c-4a71-9481-06bcd44634df_large.jpg?v=1719300249",
+        "https://ebodycare.in/cdn/shop/files/1568W-3PCS_3_c61563ae-d3f6-442b-a1e2-e298e655dff0_large.jpg?v=1719300249",
+        "https://ebodycare.in/cdn/shop/files/1568W-3PCS_2_b6d43d23-ef48-409b-9b79-c257a6169093_large.jpg?v=1719300249"
+      ],
+      "colors": [
+        "#ffffff",
+        "#f5d0b5",
+        "#111111"
+      ],
+      "sizes": [
+        "32C",
+        "34C",
+        "36C",
+        "38C",
+        "40D"
+      ],
+      "isNew": false,
+      "tab": "women"
+    },
+    {
+      "id": "prod-3",
+      "name": "Bodycare Non Padded Front Open Bra-1568 (Skin)",
+      "handle": "bodycare-non-padded-front-open-bra-1568-skin",
+      "category": "Bras",
+      "brand": "Bodycare",
+      "price": 449,
+      "originalPrice": 599,
+      "discount": "25% OFF",
+      "rating": 4.7,
+      "reviewsCount": 289,
+      "badge": "Front Closure",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/1568S_1_large.jpg?v=1742903157",
+        "https://ebodycare.in/cdn/shop/files/1568S-3PCS_3_2703e196-3045-4255-85ee-cf705cca2b51_large.jpg?v=1742903157",
+        "https://ebodycare.in/cdn/shop/files/1568S-3PCS_2_1936e475-f162-456a-8192-45f10eee8960_large.jpg?v=1742903157"
+      ],
+      "colors": [
+        "#f5d0b5",
+        "#ffffff",
+        "#111111"
+      ],
+      "sizes": [
+        "32B",
+        "34B",
+        "36B",
+        "38C"
+      ],
+      "isNew": false,
+      "tab": "women"
+    },
+    {
+      "id": "prod-4",
+      "name": "Perfect Coverage T-Shirt Bra-1517W",
+      "handle": "perfect-coverage-bra-1517w",
+      "category": "Bras",
+      "brand": "Bodycare",
+      "price": 399,
+      "originalPrice": 499,
+      "discount": "20% OFF",
+      "rating": 4.8,
+      "reviewsCount": 194,
+      "badge": "Cotton Rich",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/1517W_1_c947eab2-7eb5-41bd-b690-86a8958115ad_large.jpg?v=1742719024",
+        "https://ebodycare.in/cdn/shop/files/1517W_2_52cb5218-ca31-4bf5-b913-6a5a971db77d_large.jpg?v=1742719024",
+        "https://ebodycare.in/cdn/shop/files/1517W_3_8cd2fdf8-ed43-411a-a7a3-d8719f737b16_large.jpg?v=1742719024"
+      ],
+      "colors": [
+        "#ffffff",
+        "#222222",
+        "#f7d2bc"
+      ],
+      "sizes": [
+        "32B",
+        "34B",
+        "36B",
+        "38B",
+        "40B"
+      ],
+      "isNew": true,
+      "tab": "women"
+    },
+    {
+      "id": "prod-5",
+      "name": "BodyX Women's Combed Cotton Spandex Bikini Panty BX509 (Pack of 2)",
+      "handle": "bodyx-womens-bikini-panty-bx509-pack-of-2",
+      "category": "Panties",
+      "brand": "BodyX",
+      "price": 379,
+      "originalPrice": 499,
+      "discount": "24% OFF",
+      "rating": 4.9,
+      "reviewsCount": 420,
+      "badge": "Pack of 2",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX509DL_1_large.jpg?v=1737953843",
+        "https://ebodycare.in/cdn/shop/files/BX509DL_2_large.jpg?v=1737953843",
+        "https://ebodycare.in/cdn/shop/files/BX509DL_3_large.jpg?v=1737953843"
+      ],
+      "colors": [
+        "#ff7b90",
+        "#2c3e50",
+        "#9b59b6"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": false,
+      "tab": "women"
+    },
+    {
+      "id": "prod-6",
+      "name": "BodyX Women's Multi Solid Hipster Panty BX504 (Pack of 3)",
+      "handle": "bodyx-womens-hipster-panty-bx504-pack-of-3",
+      "category": "Panties",
+      "brand": "BodyX",
+      "price": 549,
+      "originalPrice": 749,
+      "discount": "27% OFF",
+      "rating": 4.8,
+      "reviewsCount": 680,
+      "badge": "Pack of 3",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX504_1_132e6ce8-b42a-4879-8b9c-0d32467bee6f_large.jpg?v=1719301446",
+        "https://ebodycare.in/cdn/shop/files/BX504_2_d6e5b10d-7e0f-4a70-9995-dc6f5b5311eb_large.jpg?v=1719301446",
+        "https://ebodycare.in/cdn/shop/files/BX504_3_948e957b-2706-456b-a6bf-90d170a54c98_large.jpg?v=1719301446"
+      ],
+      "colors": [
+        "#d980fa",
+        "#12cbc4",
+        "#fda7df"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "isNew": false,
+      "tab": "women"
+    },
+    {
+      "id": "prod-7",
+      "name": "BodyX Women's Combed Cotton Spandex Assorted Panty BX514",
+      "handle": "bodyx-womens-assorted-panty-bx514",
+      "category": "Panties",
+      "brand": "BodyX",
+      "price": 199,
+      "originalPrice": 269,
+      "discount": "26% OFF",
+      "rating": 4.6,
+      "reviewsCount": 153,
+      "badge": "Daily Wear",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX514_1_large.jpg?v=1737699259",
+        "https://ebodycare.in/cdn/shop/files/BX514_3_large.webp?v=1737718639"
+      ],
+      "colors": [
+        "#ee5253",
+        "#341f97",
+        "#10ac84"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "isNew": true,
+      "tab": "women"
+    },
+    {
+      "id": "prod-8",
+      "name": "Pink & Grey Cotton Printed T-Shirt & Shorts Night Suit - BSSS17038",
+      "handle": "pink-grey-cotton-night-suit-bsss17038",
+      "category": "Nightwear",
+      "brand": "Bodycare",
+      "price": 899,
+      "originalPrice": 1199,
+      "discount": "25% OFF",
+      "rating": 4.9,
+      "reviewsCount": 210,
+      "badge": "Nightwear",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/Pink-Grey-Night-Suit-BSSS17038_1.jpg",
+        "https://ebodycare.in/cdn/shop/files/Bodyactive-Women-Capri-Small-325-x-443_16-01-23.jpg?v=1721371539"
+      ],
+      "colors": [
+        "#ff9ff3",
+        "#576574"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": true,
+      "tab": "women"
+    },
+    {
+      "id": "prod-9",
+      "name": "BodyX Men Solid Cotton Super Combed Brief - BX1103B (Olive)",
+      "handle": "bodyx-men-solid-brief-bx1103b-olive",
+      "category": "Briefs",
+      "brand": "BodyX",
+      "price": 249,
+      "originalPrice": 329,
+      "discount": "24% OFF",
+      "rating": 4.8,
+      "reviewsCount": 310,
+      "badge": "100% Super Combed",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX1103B-OLV_1_large.jpg?v=1756717677",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-OLV_2_large.jpg?v=1756717678",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-OLV_3_large.jpg?v=1756717677"
+      ],
+      "colors": [
+        "#4b5320",
+        "#1b1464",
+        "#78281f",
+        "#5d6d7e"
+      ],
+      "sizes": [
+        "80cm (S)",
+        "85cm (M)",
+        "90cm (L)",
+        "95cm (XL)",
+        "100cm (XXL)"
+      ],
+      "isNew": false,
+      "tab": "men"
+    },
+    {
+      "id": "prod-10",
+      "name": "BodyX Men Solid Cotton Super Combed Brief - BX1103B (Navy)",
+      "handle": "bodyx-men-solid-brief-bx1103b-navy",
+      "category": "Briefs",
+      "brand": "BodyX",
+      "price": 249,
+      "originalPrice": 329,
+      "discount": "24% OFF",
+      "rating": 4.9,
+      "reviewsCount": 440,
+      "badge": "Bestseller",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX1103B-NVY_1_large.jpg?v=1756717557",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-NVY_2_large.jpg?v=1756717557",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-NVY_3_large.jpg?v=1756717557"
+      ],
+      "colors": [
+        "#1b1464",
+        "#4b5320",
+        "#78281f"
+      ],
+      "sizes": [
+        "80cm (S)",
+        "85cm (M)",
+        "90cm (L)",
+        "95cm (XL)"
+      ],
+      "isNew": false,
+      "tab": "men"
+    },
+    {
+      "id": "prod-11",
+      "name": "BodyX Men Solid Micro Modal Rib Trunks - BX303T (Steel Grey)",
+      "handle": "bodyx-men-micro-modal-trunks-bx303t",
+      "category": "Trunks",
+      "brand": "BodyX",
+      "price": 349,
+      "originalPrice": 449,
+      "discount": "22% OFF",
+      "rating": 4.9,
+      "reviewsCount": 520,
+      "badge": "Micro Modal",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX1103B-MARN_1_large.jpg?v=1756717450",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-OLV_1_large.jpg?v=1756717677"
+      ],
+      "colors": [
+        "#718093",
+        "#2f3640",
+        "#0c2461"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": true,
+      "tab": "men"
+    },
+    {
+      "id": "prod-12",
+      "name": "BodyX Ribbed Super Soft Micro Modal White Vests - Superia BX309",
+      "handle": "bodyx-ribbed-micro-modal-white-vests-bx309",
+      "category": "Vests",
+      "brand": "BodyX",
+      "price": 299,
+      "originalPrice": 399,
+      "discount": "25% OFF",
+      "rating": 4.8,
+      "reviewsCount": 390,
+      "badge": "Ultra Soft",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/BX1103B-NVY_1_large.jpg?v=1756717557",
+        "https://ebodycare.in/cdn/shop/files/BX1103B-OLV_2_large.jpg?v=1756717678"
+      ],
+      "colors": [
+        "#ffffff",
+        "#000000",
+        "#dcdde1"
+      ],
+      "sizes": [
+        "80cm",
+        "85cm",
+        "90cm",
+        "95cm",
+        "100cm"
+      ],
+      "isNew": false,
+      "tab": "men"
+    },
+    {
+      "id": "prod-13",
+      "name": "Bodyactive Navy Cotton Rich Regular Women's Trackpant LL38-NVY",
+      "handle": "bodyactive-navy-cotton-trackpant-ll38-nvy",
+      "category": "Trackpants",
+      "brand": "BodyActive",
+      "price": 799,
+      "originalPrice": 1099,
+      "discount": "27% OFF",
+      "rating": 4.8,
+      "reviewsCount": 230,
+      "badge": "Athleisure",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/LL38-NAV_1_09a6fbc0-c6ba-4355-bf31-52dc3207835a_large.jpg?v=1748859499",
+        "https://ebodycare.in/cdn/shop/files/LL38-NVY_large.jpg?v=1773741554",
+        "https://ebodycare.in/cdn/shop/files/LL38-NAV_2_a122c4cf-b5c8-4f8d-9d8c-9f32c15f0a0a_large.jpg?v=1773741554"
+      ],
+      "colors": [
+        "#192a56",
+        "#2f3640",
+        "#6c5ce7"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": true,
+      "tab": "athleisure"
+    },
+    {
+      "id": "prod-14",
+      "name": "Bodyactive Women Black Stretch Track Pants LL6-BLK",
+      "handle": "bodyactive-women-black-track-pants-ll6-blk",
+      "category": "Trackpants",
+      "brand": "BodyActive",
+      "price": 749,
+      "originalPrice": 999,
+      "discount": "25% OFF",
+      "rating": 4.9,
+      "reviewsCount": 512,
+      "badge": "Bestseller",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/LL6-BLACK_1_beed07fe-5c6e-4d1b-9417-8950287ff1b1_large.jpg?v=1719298550",
+        "https://ebodycare.in/cdn/shop/files/LL6-BLK_large.jpg?v=1773740753",
+        "https://ebodycare.in/cdn/shop/files/LL6-BLACK_3_24c8225e-297f-46ba-a3f1-eca5e5947751_large.jpg?v=1719298550"
+      ],
+      "colors": [
+        "#111111",
+        "#2c2c54",
+        "#40407a"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": false,
+      "tab": "athleisure"
+    },
+    {
+      "id": "prod-15",
+      "name": "Bodyactive Women Dark Purple Trackpant LL6-DPU",
+      "handle": "bodyactive-women-dark-purple-trackpant-ll6-dpu",
+      "category": "Trackpants",
+      "brand": "BodyActive",
+      "price": 749,
+      "originalPrice": 999,
+      "discount": "25% OFF",
+      "rating": 4.7,
+      "reviewsCount": 180,
+      "badge": "Trending",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/LL6-DPU_1_ba7eff4f-2802-45fb-868e-c509f2ac4f07_large.jpg?v=1752838315",
+        "https://ebodycare.in/cdn/shop/files/LL6-DPU_2_4896e5ee-97cd-47a7-8c8e-fa94ae719868_large.jpg?v=1752838315"
+      ],
+      "colors": [
+        "#574b90",
+        "#2c2c54",
+        "#222f3e"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "isNew": false,
+      "tab": "athleisure"
+    },
+    {
+      "id": "prod-16",
+      "name": "Bodyactive Women Black Cotton Shorts with Pockets SHW2-BLK",
+      "handle": "bodyactive-women-black-cotton-shorts-shw2-blk",
+      "category": "Shorts",
+      "brand": "BodyActive",
+      "price": 499,
+      "originalPrice": 699,
+      "discount": "28% OFF",
+      "rating": 4.8,
+      "reviewsCount": 298,
+      "badge": "Summer Pick",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/Bodyactive-Women-Capri-Small-325-x-443_16-01-23.jpg?v=1721371539",
+        "https://ebodycare.in/cdn/shop/files/LL6-BLACK_1_beed07fe-5c6e-4d1b-9417-8950287ff1b1_large.jpg?v=1719298550"
+      ],
+      "colors": [
+        "#111111",
+        "#192a56",
+        "#718093"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "isNew": false,
+      "tab": "athleisure"
+    },
+    {
+      "id": "prod-17",
+      "name": "Bodyactive Black 4-Way Stretch Poly-Spandex Men's Trackpant L28-BLK",
+      "handle": "bodyactive-black-4-way-stretch-mens-trackpant-l28-blk",
+      "category": "Trackpants",
+      "brand": "BodyActive",
+      "price": 899,
+      "originalPrice": 1299,
+      "discount": "30% OFF",
+      "rating": 4.9,
+      "reviewsCount": 360,
+      "badge": "4-Way Stretch",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/Bodyactive-Men-Shorts-Small-325-x-443_16-01-23.jpg?v=1721371570",
+        "https://ebodycare.in/cdn/shop/files/LL38-NAV_1_09a6fbc0-c6ba-4355-bf31-52dc3207835a_large.jpg?v=1748859499"
+      ],
+      "colors": [
+        "#1e272e",
+        "#2c3e50",
+        "#485460"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "isNew": true,
+      "tab": "athleisure"
+    },
+    {
+      "id": "prod-18",
+      "name": "BodyX Tanza Eau De Parfum for Women 25ml",
+      "handle": "bodyx-tanza-eau-de-parfum-for-women-25ml",
+      "category": "Perfume",
+      "brand": "BodyX Fragrance",
+      "price": 349,
+      "originalPrice": 499,
+      "discount": "30% OFF",
+      "rating": 4.8,
+      "reviewsCount": 175,
+      "badge": "Long Lasting",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/fsfasfasfas.png?v=1720687873",
+        "https://ebodycare.in/cdn/shop/files/left.jpg?v=1720691092"
+      ],
+      "colors": [
+        "#ff9ff3"
+      ],
+      "sizes": [
+        "25ml EDP",
+        "Combo Set 25ml+200ml Mist"
+      ],
+      "isNew": true,
+      "tab": "perfume"
+    },
+    {
+      "id": "prod-19",
+      "name": "BodyX Opel Eau De Parfum for Men Masculine Fragrance 25ml",
+      "handle": "bodyx-opel-eau-de-parfum-for-men-25ml",
+      "category": "Perfume",
+      "brand": "BodyX Fragrance",
+      "price": 349,
+      "originalPrice": 499,
+      "discount": "30% OFF",
+      "rating": 4.9,
+      "reviewsCount": 220,
+      "badge": "Top Seller",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/right.jpg?v=1720691590",
+        "https://ebodycare.in/cdn/shop/files/fsfasfasfas.png?v=1720687873"
+      ],
+      "colors": [
+        "#2c3e50"
+      ],
+      "sizes": [
+        "25ml EDP",
+        "Deo + Perfume Combo"
+      ],
+      "isNew": false,
+      "tab": "perfume"
+    },
+    {
+      "id": "prod-20",
+      "name": "BodyX Unisex Discovery Perfume Set of 4 (Hope, Onyx, Opel, Topaz)",
+      "handle": "bodyx-unisex-perfume-set-of-4",
+      "category": "Perfume",
+      "brand": "BodyX Fragrance",
+      "price": 999,
+      "originalPrice": 1499,
+      "discount": "33% OFF",
+      "rating": 4.9,
+      "reviewsCount": 410,
+      "badge": "Gift Set",
+      "images": [
+        "https://ebodycare.in/cdn/shop/files/Untitled_design_1.png?v=1763111996",
+        "https://ebodycare.in/cdn/shop/files/Untitled_design.png?v=1763370561"
+      ],
+      "colors": [
+        "#dcdde1"
+      ],
+      "sizes": [
+        "4 x 25ml"
+      ],
+      "isNew": true,
+      "tab": "perfume"
+    }
+  ],
+  "brands": [
+    {
+      "name": "Bodycare Women",
+      "logo": "https://ebodycare.in/cdn/shop/files/Group_98.png?v=1720173775&width=600",
+      "tagline": "Love Your Body",
+      "description": "Pioneering Indian intimate wear since 1992 with featherlight fabrics and precise fit engineering.",
+      "color": "#fe0008"
+    },
+    {
+      "name": "BodyX Men",
+      "logo": "https://ebodycare.in/cdn/shop/files/Body-X_Logo_367_x_150.png?v=1724479897",
+      "tagline": "Comfort Redefined",
+      "description": "Super combed cotton & micro modal innerwear designed for absolute support and breathability.",
+      "color": "#182C61"
+    },
+    {
+      "name": "BodyActive",
+      "logo": "https://ebodycare.in/cdn/shop/files/WEfsfasfasfas_f49b191c-0484-420e-aaf5-8b79cb5ea915.png?v=1721026260",
+      "tagline": "Built For Motion",
+      "description": "High-performance sportswear, active trackpants, yoga pants, and athleisure essentials.",
+      "color": "#00b894"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Pooja Sharma",
+      "location": "New Delhi",
+      "rating": 5,
+      "title": "Unmatched Daily Comfort",
+      "comment": "The 1517S Perfect Coverage Bra is hands down the best bra I've purchased in India. The cotton is soft, non-itchy straps, and fits like second skin!",
+      "product": "Perfect Coverage Bra-1517S",
+      "verified": true
+    },
+    {
+      "name": "Rahul Verma",
+      "location": "Mumbai",
+      "rating": 5,
+      "title": "BodyX Micro Modal Trunks are incredible",
+      "comment": "Switched from expensive international brands to BodyX. The micro modal fabric is so breathable during hot humid days. Highly recommend the 3-packs!",
+      "product": "BodyX Micro Modal Trunks BX303T",
+      "verified": true
+    },
+    {
+      "name": "Ananya Deshmukh",
+      "location": "Pune",
+      "rating": 5,
+      "title": "Superb Yoga Trackpants",
+      "comment": "I wear BodyActive high waist pants for Pilates and morning jogs. Super flexible, no sagging at all, and deep pockets for phone!",
+      "product": "Bodyactive LL38 Navy Trackpant",
+      "verified": true
+    },
+    {
+      "name": "Vikram Malhotra",
+      "location": "Bangalore",
+      "rating": 5,
+      "title": "Great value and quick delivery",
+      "comment": "Ordered the BodyX discovery set and gym vests. Received in 2 days in Bangalore. The fit and stitching quality is 10/10.",
+      "product": "BodyX Ribbed Superia Vests",
+      "verified": true
+    }
+  ],
+  "trustBadges": [
+    {
+      "title": "100% Cotton & Skin-Friendly",
+      "desc": "Hypoallergenic, breathable, OEKO-TEX certified dyes",
+      "icon": "ShieldCheck"
+    },
+    {
+      "title": "Free Shipping Across India",
+      "desc": "On all prepaid & COD orders above ₹499",
+      "icon": "Truck"
+    },
+    {
+      "title": "Easy 7-Days Exchange",
+      "desc": "Hassle-free size exchange and returns",
+      "icon": "RefreshCw"
+    },
+    {
+      "title": "Proudly Made in India",
+      "desc": "30+ Years of Craftsmanship & Trust",
+      "icon": "Award"
+    }
+  ]
+}

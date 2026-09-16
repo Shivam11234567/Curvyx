@@ -115,9 +115,8 @@ export default function MobileBottomNav() {
         <div className="flex items-center justify-around">
           <Link
             href="/"
-            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isActive("/") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <Home className="w-5 h-5" />
             <span className="text-[10px] tracking-tight">Home</span>
@@ -125,11 +124,10 @@ export default function MobileBottomNav() {
 
           <button
             onClick={() => setIsCategoryDrawerOpen(!isCategoryDrawerOpen)}
-            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isCategoryDrawerOpen || pathname.startsWith("/category")
-                ? "text-rose-600 font-bold"
-                : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isCategoryDrawerOpen || pathname.startsWith("/category")
+              ? "text-rose-600 font-bold"
+              : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <Grid className="w-5 h-5" />
             <span className="text-[10px] tracking-tight">Shop</span>
@@ -137,9 +135,8 @@ export default function MobileBottomNav() {
 
           <Link
             href="/search"
-            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isActive("/search") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/search") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <Search className="w-5 h-5" />
             <span className="text-[10px] tracking-tight">Search</span>
@@ -147,9 +144,8 @@ export default function MobileBottomNav() {
 
           <Link
             href="/wishlist"
-            className={`relative flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isActive("/wishlist") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`relative flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/wishlist") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <Heart className="w-5 h-5" />
             {wishlistItemCount > 0 && (
@@ -162,9 +158,8 @@ export default function MobileBottomNav() {
 
           <Link
             href="/cart"
-            className={`relative flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isActive("/cart") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`relative flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/cart") ? "text-rose-600 font-bold" : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <ShoppingBag className="w-5 h-5" />
             {cartItemCount > 0 && (
@@ -177,11 +172,10 @@ export default function MobileBottomNav() {
 
           <Link
             href={user ? "/account" : "/login"}
-            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${
-              isActive("/account") || isActive("/login")
-                ? "text-rose-600 font-bold"
-                : "text-neutral-500 hover:text-neutral-900"
-            }`}
+            className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors ${isActive("/account") || isActive("/login")
+              ? "text-rose-600 font-bold"
+              : "text-neutral-500 hover:text-neutral-900"
+              }`}
           >
             <UserIcon className="w-5 h-5" />
             <span className="text-[10px] tracking-tight">{user ? "Account" : "Login"}</span>

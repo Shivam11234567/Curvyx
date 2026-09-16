@@ -157,11 +157,10 @@ export default function ProductDetailPage() {
               <button
                 key={img.id}
                 onClick={() => setSelectedImage(img.image_url)}
-                className={`relative w-20 h-24 rounded-xl overflow-hidden border-2 flex-shrink-0 transition-all ${
-                  selectedImage === img.image_url
-                    ? "border-rose-600 shadow-md ring-2 ring-rose-100"
-                    : "border-neutral-200 hover:border-rose-300"
-                }`}
+                className={`relative w-20 h-24 rounded-xl overflow-hidden border-2 flex-shrink-0 transition-all ${selectedImage === img.image_url
+                  ? "border-rose-600 shadow-md ring-2 ring-rose-100"
+                  : "border-neutral-200 hover:border-rose-300"
+                  }`}
               >
                 <img src={img.image_url} alt="" className="w-full h-full object-cover" />
               </button>
@@ -224,11 +223,10 @@ export default function ProductDetailPage() {
                   <button
                     key={clr}
                     onClick={() => setSelectedColor(clr)}
-                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all ${
-                      selectedColor === clr
-                        ? "border-rose-600 bg-rose-50/60 text-rose-950 ring-1 ring-rose-600"
-                        : "border-neutral-200 bg-white text-neutral-700 hover:border-rose-300"
-                    }`}
+                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all ${selectedColor === clr
+                      ? "border-rose-600 bg-rose-50/60 text-rose-950 ring-1 ring-rose-600"
+                      : "border-neutral-200 bg-white text-neutral-700 hover:border-rose-300"
+                      }`}
                   >
                     <span
                       className="w-3.5 h-3.5 rounded-full border border-neutral-300"
@@ -259,11 +257,10 @@ export default function ProductDetailPage() {
                 <button
                   key={sz}
                   onClick={() => setSelectedSize(sz)}
-                  className={`min-w-[48px] h-11 px-3 rounded-xl text-xs font-bold border transition-all ${
-                    selectedSize === sz
-                      ? "bg-rose-600 text-white border-rose-600 shadow-md"
-                      : "bg-white text-neutral-800 border-neutral-200 hover:border-rose-300"
-                  }`}
+                  className={`min-w-[48px] h-11 px-3 rounded-xl text-xs font-bold border transition-all ${selectedSize === sz
+                    ? "bg-rose-600 text-white border-rose-600 shadow-md"
+                    : "bg-white text-neutral-800 border-neutral-200 hover:border-rose-300"
+                    }`}
                 >
                   {sz}
                 </button>
@@ -330,11 +327,10 @@ export default function ProductDetailPage() {
 
             <button
               onClick={() => toggleWishlistMutation.mutate()}
-              className={`p-3.5 rounded-full border transition-all ${
-                isWishlisted
-                  ? "bg-rose-50 border-rose-600 text-rose-600 shadow-sm"
-                  : "bg-white border-neutral-200 text-neutral-700 hover:text-rose-600 hover:border-rose-300"
-              }`}
+              className={`p-3.5 rounded-full border transition-all ${isWishlisted
+                ? "bg-rose-50 border-rose-600 text-rose-600 shadow-sm"
+                : "bg-white border-neutral-200 text-neutral-700 hover:text-rose-600 hover:border-rose-300"
+                }`}
               aria-label="Wishlist toggle"
             >
               <Heart className={`w-5 h-5 ${isWishlisted ? "fill-current" : ""}`} />

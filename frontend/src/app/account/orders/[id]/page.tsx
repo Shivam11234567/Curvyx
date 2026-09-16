@@ -96,23 +96,21 @@ function OrderDetailContent() {
 
           <div className="flex flex-wrap gap-2">
             <span
-              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                order.order_status === "DELIVERED"
+              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${order.order_status === "DELIVERED"
                   ? "bg-emerald-100 text-emerald-800"
                   : order.order_status === "CONFIRMED" || order.order_status === "PROCESSING"
-                  ? "bg-blue-100 text-blue-800"
-                  : "bg-amber-100 text-amber-800"
-              }`}
+                    ? "bg-blue-100 text-blue-800"
+                    : "bg-amber-100 text-amber-800"
+                }`}
             >
               Order: {order.order_status}
             </span>
 
             <span
-              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                order.payment_status === "PAID"
+              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${order.payment_status === "PAID"
                   ? "bg-emerald-100 text-emerald-800"
                   : "bg-amber-100 text-amber-800"
-              }`}
+                }`}
             >
               Payment: {order.payment_status}
             </span>

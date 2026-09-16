@@ -154,11 +154,10 @@ export default function CategoryPage() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsFilterOpen(!isFilterOpen)}
-            className={`flex items-center gap-2 px-4 py-2 border rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${
-              isFilterOpen
+            className={`flex items-center gap-2 px-4 py-2 border rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${isFilterOpen
                 ? "bg-rose-50 border-rose-300 text-rose-900 shadow-sm"
                 : "border-rose-200 text-neutral-800 hover:bg-rose-50"
-            }`}
+              }`}
           >
             <SlidersHorizontal className="w-3.5 h-3.5" />
             <span>Filters</span>
@@ -219,11 +218,10 @@ export default function CategoryPage() {
                 <button
                   key={sz}
                   onClick={() => setSelectedSize(selectedSize === sz ? "" : sz)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
-                    selectedSize === sz
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all ${selectedSize === sz
                       ? "bg-rose-600 text-white border-rose-600 shadow-sm scale-105"
                       : "bg-white text-neutral-700 border-rose-200/80 hover:border-rose-400 hover:bg-white"
-                  }`}
+                    }`}
                 >
                   {sz}
                 </button>
@@ -253,11 +251,10 @@ export default function CategoryPage() {
                   <button
                     key={clr.name}
                     onClick={() => setSelectedColor(isSelected ? "" : clr.name)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
-                      isSelected
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${isSelected
                         ? "bg-rose-600 text-white border-rose-600 shadow-sm scale-105"
                         : "bg-white text-neutral-700 border-rose-200/80 hover:border-rose-400 hover:bg-white"
-                    }`}
+                      }`}
                   >
                     <span
                       className="w-2.5 h-2.5 rounded-full border border-black/10 shrink-0"
@@ -290,11 +287,10 @@ export default function CategoryPage() {
                 <button
                   key={opt.value}
                   onClick={() => setPriceRange(opt.value)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
-                    priceRange === opt.value
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${priceRange === opt.value
                       ? "bg-rose-600 text-white border-rose-600 shadow-sm scale-105"
                       : "bg-white text-neutral-700 border-rose-200/80 hover:border-rose-400 hover:bg-white"
-                  }`}
+                    }`}
                 >
                   {opt.label}
                 </button>
