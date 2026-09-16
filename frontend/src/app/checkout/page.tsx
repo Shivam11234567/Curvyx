@@ -577,19 +577,21 @@ export default function CheckoutPage() {
             <button
               onClick={handlePlaceOrderAndPay}
               disabled={isProcessingPayment || !selectedAddressId}
-              className="w-full py-4 bg-rose-600 hover:bg-rose-700 disabled:bg-neutral-300 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-rose-600/30 transition-all flex items-center justify-center gap-2"
+              className="w-full py-4 bg-rose-600 hover:bg-rose-700 disabled:bg-neutral-300 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-rose-600/30 transition-all flex items-center justify-center gap-2"
             >
               {isProcessingPayment ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
                   <span>Processing Order...</span>
                 </>
+              ) : !selectedAddressId ? (
+                <span>Please Select a Delivery Address</span>
               ) : (
                 <>
                   <span>
                     {paymentMethod === "COD"
                       ? `Place COD Order • ${formatCurrency(cart?.total_amount || 0)}`
-                      : `Pay ${formatCurrency(cart?.total_amount || 0)}`}
+                      : `Pay ${formatCurrency(cart?.total_amount || 0)} via Razorpay`}
                   </span>
                   <ArrowRight className="w-4 h-4" />
                 </>
