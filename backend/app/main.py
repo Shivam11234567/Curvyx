@@ -32,8 +32,33 @@ from app.api.v1.admin.system import router as admin_system_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
-    Base.metadata.create_all(bind=engine)
+    try:
+        os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
+    except Exception:
+        pass
+    try:
+        Base.metadata.create_all(bind=engine)
+        # Ensure default admin user is seeded
+        from app.db.session import SessionLocal
+        from app.models.admin_user import AdminUser
+        from app.core.security import get_password_hash
+        db = SessionLocal()
+        try:
+            admin = db.query(AdminUser).filter(AdminUser.email == "admin@curvyx.com").first()
+            if not admin:
+                new_admin = AdminUser(
+                    email="admin@curvyx.com",
+                    name="Curvyx Admin",
+                    password_hash=get_password_hash("Admin@123456"),
+                    role="super_admin",
+                    is_active=True
+                )
+                db.add(new_admin)
+                db.commit()
+        finally:
+            db.close()
+    except Exception as e:
+        print(f"Lifespan DB setup notice: {e}")
     yield
 
 app = FastAPI(
@@ -48,9 +73,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=settings.CORS_ORIGINS if isinstance(settings.CORS_ORIGINS, list) else [settings.CORS_ORIGINS],
+    allow_origin_regex=r"https://.*\.vercel\.app|http://localhost:.*|http://127\.0\.0\.1:.*",
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -134,6 +160,10 @@ app.include_router(admin_homepage_router, prefix="/api/v1/admin")
 app.include_router(admin_reports_router, prefix="/api/v1/admin")
 app.include_router(admin_system_router, prefix="/api/v1/admin")
 
-if not os.path.exists(settings.UPLOAD_DIR):
-    os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
-app.mount("/uploads", StaticFiles(directory=settings.UPLOAD_DIR), name="uploads")
+try:
+    if not os.path.exists(settings.UPLOAD_DIR):
+        os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
+    app.mount("/uploads", StaticFiles(directory=settings.UPLOAD_DIR), name="uploads")
+except Exception as e:
+    print(f"Upload mount notice: {e}")
+

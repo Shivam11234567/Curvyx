@@ -11,7 +11,10 @@ MAX_FILE_SIZE = 5 * 1024 * 1024
 class StorageService:
     def __init__(self):
         self.upload_dir = os.path.abspath(settings.UPLOAD_DIR)
-        os.makedirs(self.upload_dir, exist_ok=True)
+        try:
+            os.makedirs(self.upload_dir, exist_ok=True)
+        except Exception:
+            pass
 
     async def upload_image(self, file: UploadFile) -> str:
         filename = file.filename or ""

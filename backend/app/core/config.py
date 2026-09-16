@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     JWT_SECRET_KEY: str = "dev-secret-key-change-in-production-must-be-long"
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
-    CORS_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173"
+    CORS_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173,https://curvyx.vercel.app,https://curvyx-2qrx.vercel.app,*"
     RAZORPAY_KEY_ID: str = "rzp_test_placeholder"
     RAZORPAY_KEY_SECRET: str = "rzp_test_secret"
     RAZORPAY_WEBHOOK_SECRET: str = "rzp_test_webhook"
@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     STORAGE_REGION: str = "us-east-1"
     PORT: int = 8000
     ENVIRONMENT: str = "development"
-    UPLOAD_DIR: str = "uploads"
+    UPLOAD_DIR: str = "/tmp/uploads" if (os.environ.get("VERCEL") or not os.access(".", os.W_OK)) else "uploads"
     GOOGLE_CLIENT_ID: Optional[str] = None
 
     model_config = SettingsConfigDict(
