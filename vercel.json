@@ -14,39 +14,59 @@
   },
   "rewrites": [
     {
-      "source": "/api/:path*",
+      "source": "/api/(.*)",
       "destination": {
-        "service": "backend"
+        "service": "backend",
+        "path": "/api/$1"
       }
     },
     {
       "source": "/health",
       "destination": {
-        "service": "backend"
+        "service": "backend",
+        "path": "/health"
       }
     },
     {
       "source": "/docs",
       "destination": {
-        "service": "backend"
+        "service": "backend",
+        "path": "/docs"
       }
     },
     {
       "source": "/openapi.json",
       "destination": {
-        "service": "backend"
+        "service": "backend",
+        "path": "/openapi.json"
       }
     },
     {
-      "source": "/admin/:path*",
+      "source": "/admin/assets/(.*)",
       "destination": {
-        "service": "admin"
+        "service": "admin",
+        "path": "/assets/$1"
+      }
+    },
+    {
+      "source": "/admin/(.*\\.[a-zA-Z0-9]+)",
+      "destination": {
+        "service": "admin",
+        "path": "/$1"
       }
     },
     {
       "source": "/admin",
       "destination": {
-        "service": "admin"
+        "service": "admin",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": {
+        "service": "admin",
+        "path": "/index.html"
       }
     },
     {
@@ -57,4 +77,5 @@
     }
   ]
 }
+
 
