@@ -1,11 +1,8 @@
 import { ApiResponse } from "@/types";
 
 const BASE_URL =
-  import.meta.env.VITE_API_URL !== undefined
-    ? import.meta.env.VITE_API_URL
-    : import.meta.env.DEV
-    ? "http://localhost:8000"
-    : "";
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV ? "http://localhost:8000" : "https://curvyx.vercel.app");
 
 class AdminApiClient {
   private baseUrl: string;
